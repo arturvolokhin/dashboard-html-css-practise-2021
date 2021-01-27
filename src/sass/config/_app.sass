@@ -1,0 +1,56 @@
+.wrapper 
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    max-width: 1600px
+    height: 1200px
+    margin: 0 auto
+    text-align: center
+    height: 1200px
+    font-family: Gilroy
+    color: #CACACA
+    overflow: hidden
+
+                   
+.container 
+    position: relative
+    width: 1280px
+    height: 880px
+    background-color: #212427
+    box-sizing: border-box
+    border-radius: 14px
+    &::before
+        content: ''
+        position: absolute
+        top: -387px;
+        left: -387px;
+        display: inline-block
+        width: 1600px
+        height: 1083px
+        background: url(../img/bg/Union.png) no-repeat
+        
+        z-index: -1
+    &::after
+        content: ''
+        position: absolute
+        right: -225px
+        bottom: -225px
+        display: block
+        width: 283px
+        height: 283px
+        background: linear-gradient(180deg, #7F7FD5 0%, #E786D7 100%)
+        border-radius: 50%
+    
+     
+
+.dashboard
+    padding: 45px 45px 45px 150px
+    height: 100%
+    &__wrapper
+        display: grid
+        grid-template-columns: repeat(18, 1fr)
+        grid-template-rows: 148px 1fr 1fr
+        grid-gap: 30px
+        margin: 38px 0 0
+        height: calc(100% - 88px);    

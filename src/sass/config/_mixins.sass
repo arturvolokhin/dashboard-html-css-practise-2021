@@ -1,0 +1,47 @@
+@mixin box-style
+    display: grid
+    justify-content: center
+    align-items: center
+    background: #282C31
+    border: 1px solid #4D4D4D
+    border-radius: 13px
+    padding: 0 24px
+
+@mixin title
+    font-weight: 700
+    font-size: 20px  
+    width: 180px  
+    text-align: left   
+
+@mixin value
+    font-weight: 500
+    font-size: 20px     
+
+@mixin circle
+    display: inline-block
+    height: 5px
+    width: 5px
+    border-radius: 50%
+    background-color: $numbers-color    
+
+@mixin rating
+    font-weight: 500
+    font-size: 20px
+    color: $numbers-color
+
+@mixin arrow-up
+    content: ''
+    display: inline-block
+    margin: 0 0 0 9px;
+    background: url(../img/icons/arrow-up.png) no-repeat center
+    width: 15px
+    height: 15px
+
+@mixin arrow-down
+    content: ''
+    display: inline-block
+    margin: 0 0 0 9px;
+    background: url(../img/icons/arrow-down.png) no-repeat center
+    width: 15px
+    height: 15px    
+        

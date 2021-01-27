@@ -1,0 +1,80 @@
+.geo
+    @include box-style()
+    &__box
+        grid-column: 12 / 19
+        grid-row: 3 / 4
+        grid-template-columns: 1fr 1fr
+        grid-template-rows: repeat(4, 1fr)
+        grid-column-gap: 34px
+        grid-auto-rows: max-content
+        grid-row-gap: 16px
+        grid-template-rows: 65px
+        
+    &__title
+        @include title()
+
+    &__switch
+        display: grid
+        grid-template-columns: 3fr 1fr
+        justify-items: end
+
+    &__link
+        font-weight: 600
+        font-size: 12px
+
+        &:hover
+            color: $numbers-color
+
+        &:focus
+            color: $main-color
+
+    &__item
+        width: 140px
+    &__text
+        display: flex
+        justify-content: space-between
+        margin: 0 0 9px
+        font-weight: 500
+        font-size: 12px
+        &-name
+
+        &-percent
+
+    &__progress
+        position: relative
+        display: inline-block
+        grid-area: progress
+        width: 140px
+        height: 10px
+        background: #4D4D4D
+        border-radius: 9px
+        &::before
+            content: ''
+            position: absolute
+            left: 0
+            display: inline-block
+            width: 0px
+            height: 10px
+            background: #7F7FD5
+            border-radius: 6px
+        &--russia::before
+            width: 128px
+        &--china::before
+            width: 13px
+        &--ukraine::before
+            width: 5px
+        &--usa::before
+            width: 5px
+        &--mongolia::before
+            width: 4px
+        &--other::before
+            width: 15px    
+
+                
+
+
+
+
+
+                
+

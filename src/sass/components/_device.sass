@@ -1,0 +1,58 @@
+.device
+    display: grid
+    background: #282C31
+    border: 1px solid #4D4D4D
+    border-radius: 13px
+    padding: 22px 10px 22px 24px
+    &__box
+        position: relative
+        grid-column: 14 / 19
+        grid-row: 2 / 3
+
+    &__title
+        @include title()
+
+    &__diagram-mobile
+        position: absolute
+        top: 90px
+        left: 20px
+
+    &__diagram-desktop
+        position: absolute
+        top: 97px
+        left: 95px
+
+    &__text
+        padding: 0 0 0 150px
+        text-align: left
+        font-weight: 600
+        font-size: 12px
+        margin: 0 0 40px
+
+        &-desktop
+            margin: 0 0 11px
+            display: flex
+            align-items: center
+            
+            &::before
+                content: ''
+                display: inline-block
+                width: 16px
+                height: 16px
+                border-radius: 5px
+                background: $second-color
+                margin: 0 7px 0 0
+
+        &-mobile
+            display: flex
+            align-items: center
+            justify-content: space-between
+            
+            &::before
+                content: ''
+                display: inline-block
+                width: 16px
+                height: 16px
+                border-radius: 5px
+                background: $main-color      
+      

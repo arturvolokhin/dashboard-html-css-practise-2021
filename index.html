@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style/main.css">
+    <link rel="stylesheet" href="src/fonts/stylesheet.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="navbar">
+                <img class="navbar__logo" src="src/img/icons/vk-logo.png" alt="vk logo">
+                <ul class="navbar__list">
+                    <li class="navbar__item"><a href="#" class="navbar__link"><img class="navbar__link-image" src="src/img/icons/home.png" alt="My profile"></a></li>
+                    <li class="navbar__item"><a href="#" class="navbar__link"><img class="navbar__link-image" src="src/img/icons/news.png" alt="News"></a></li>
+                    <li class="navbar__item"><a href="#" class="navbar__link"><img class="navbar__link-image" src="src/img/icons/friends.png" alt="Friends"></a></li>
+                    <li class="navbar__item"><a href="#" class="navbar__link"><img class="navbar__link-image" src="src/img/icons/messages.png" alt="Messenger"></a></li>
+                    <li class="navbar__item"><a href="#" class="navbar__link"><img class="navbar__link-image" src="src/img/icons/videos.png" alt="Videos"></a></li>
+                    <li class="navbar__item"><a href="#" class="navbar__link navbar__link--active"><img class="navbar__link-image" src="src/img/icons/statistics.png" alt="Statistics"></a></li>
+                    <li class="navbar__item"><a href="#" class="navbar__link"><img class="navbar__link-image" src="src/img/icons/settings.png" alt="Settings"></a></li>
+                </ul>
+                <label class="switch">
+                    <input class="switch__checkbox" type="checkbox">
+                    <span class="switch__slider"></span>
+                </label>
+            </div>
+            
+            <div class="dashboard">
+
+                <header class="header">
+                    <div class="header__content">
+                        <h1 class="header__title">Statistics</h1>
+                        <form class="header__form" action="">
+                            <input class="header__form-search" type="search" placeholder="Search">
+                            <button class="header__form-button" type="submit"></button>
+                        </form>
+                        <img class="header__notification" src="src/img/icons/notification.png" alt="Notifications">
+                    </div>
+                    <div class="header__login">
+                        <p class="header__login-name">Anya</p>
+                        <img src="src/img/icons/avatar.png" alt="Avatar" class="header__login-avatar">
+                        <select class="header__login-dropdown">
+                            <a href="#">Settings</a>
+                            <a href="#">Support</a>
+                            <a href="#">Exit</a>
+                            <!-- <option><a href="#">Settings</a></option>
+                            <option><a href="#">Support</a></option>
+                            <option><a href="#">Exit</a></option> -->
+                        </select>
+                    </div>
+                </header>
+                
+                <div class="dashboard__wrapper">
+                    <div class="people people__box-left">
+                        <h2 class="people__title">Friends</h2>
+                        <div class="people__dropdown">
+                            <div class="people__circle"></div>
+                            <div class="people__circle"></div>
+                            <div class="people__circle"></div>
+                        </div>
+                        <p class="people__value">271 people</p>
+                        <p class="people__rating people__rating--arrow-up">+ 0,7%</p>
+                    </div>
+                    <div class="people people__box-middle">
+                        <h2 class="people__title">Unique visitors </h2>
+                        <div class="people__dropdown">
+                            <div class="people__circle"></div>
+                            <div class="people__circle"></div>
+                            <div class="people__circle"></div>
+                        </div>
+                        <p class="people__value">69 people</p>
+                        <p class="people__rating people__rating--arrow-down">- 1,7%</p>
+                    </div>
+                    <div class="people people__box-right">
+                        <h2 class="people__title">Followers</h2>
+                        <div class="people__dropdown">
+                            <div class="people__circle"></div>
+                            <div class="people__circle"></div>
+                            <div class="people__circle"></div>
+                        </div>
+                        <p class="people__value">288 people</p>
+                        <p class="people__rating people__rating--arrow-up">+ 1%</p>
+                    </div>
+
+                    <div class="audience audience__box">
+                        <div class="audience__header">
+                            <h2 class="audience__title">Audience reach</h2>
+                            <div class="audience__date">
+                                <input type="date" >
+                            </div>
+                            <div class="audience__wrap">
+                                <input class="audience__checkbox" type="checkbox"  id="checkbox-total">
+                                <label class="audience__check-mark" for="checkbox-total"></label>
+                                <span class="audience__checkbox-name">Total</span>
+                                <input class="audience__checkbox" type="checkbox"  id="checkbox-follower">
+                                <label class="audience__check-mark" for="checkbox-follower"></label>
+                                <span class="audience__checkbox-name">Follower</span>
+                            </div>
+
+                        </div>
+                        <img src="src/img/dashboard/audience.png" alt="">
+                    </div>
+
+                    <div class="device device__box">
+                        <h2 class="device__title">Reach by device</h2>
+                        <img class="device__diagram-mobile" src="src/img/dashboard/device-mobile.png" alt="diagram">
+                        <img class="device__diagram-desktop" src="src/img/dashboard/device-desktop.png" alt="diagram">
+                        <div class="device__text">
+                            <p class="device__text-desktop">Desktop</p>
+                            <p class="device__text-mobile">Mobile views</p>
+                        </div>
+                    </div>
+
+                    <div class="gender gender__box">
+                        <div class="gender__header">
+                            <h2 class="gender__title">Gender / Age</h2>
+                            <div class="gender__text">
+                                <p class="gender__women">Women</p>
+                                <p class="gender__men">Men</p>
+                            </div>
+                        </div>
+                        <!-- <img src="src/img/dashboard/gender.png" alt=""> -->
+                    </div>
+
+                    <div class="geo geo__box">
+                        <h2 class="geo__title">Geo</h2>
+                        <div class="geo__switch">
+                            <a href="" class="geo__link geo__link">Country</a>
+                            <a href="" class="geo__link geo__link--deactive">City</a>
+                        </div>
+                        <div class="geo__item">
+                            <div class="geo__text">
+                                <p class="geo__item-name">Russia</p>
+                                <p class="geo__item-percent">94%</p>
+                            </div>
+                            <span class="geo__progress geo__progress--russia"></span>
+                        </div>
+                        <div class="geo__item">
+                            <div class="geo__text">
+                                <p class="geo__item-name">China</p>
+                                <p class="geo__item-percent">0,26%</p>
+                            </div>
+                            <span class="geo__progress geo__progress--china"></span>
+                        </div>
+                        <div class="geo__item">
+                            <div class="geo__text">
+                                <p class="geo__item-name">Ukraine</p>
+                                <p class="geo__item-percent">0,20%</p>
+                            </div>
+                            <span class="geo__progress geo__progress--ukraine"></span>
+                        </div>
+                        <div class="geo__item">
+                            <div class="geo__text">
+                                <p class="geo__item-name">USA</p>
+                                <p class="geo__item-percent">0,20%</p>
+                            </div>
+                            <span class="geo__progress geo__progress--usa"></span>
+                        </div>
+                        <div class="geo__item">
+                            <div class="geo__text">
+                                <p class="geo__item-name">Mongolia</p>
+                                <p class="geo__item-percent">0,13%</p>
+                            </div>
+                            <span class="geo__progress geo__progress--mongolia"></span>
+                        </div>
+                        <div class="geo__item">
+                            <div class="geo__text">
+                                <p class="geo__item-name">Other</p>
+                                <p class="geo__item-percent">1,37%</p>
+                            </div>
+                            <span class="geo__progress geo__progress--other"></span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+@import 'config/_reset'
+@import 'config/_variables'
+@import 'config/_mixins'
+@import 'config/_app'
+@import 'components/_elements'
+@import 'components/_navbar'
+@import 'components/_header'
+@import 'components/_people'
+@import 'components/_audience'
+@import 'components/_device'
+@import 'components/_gender'
+@import 'components/_geo'
+
+
+
+a
+    text-decoration: none
+    color: #cacaca
+
+
+.switch
+    position: relative
+    display: inline-block
+    width: 60px
+    height: 30px
+    &__slider
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        background: #212427
+        border-radius: 50px
+        cursor: pointer
+        transition: 0.5s
+        border: 1px solid #4D4D4D
+
+        &::before
+            content: ''
+            position: absolute
+            top: calc(50% - 10px)
+            left: 5px
+            display: block
+            width: 20px
+            height: 20px
+            background: $main-color
+            border: 4px solid #E9E9E9
+            border-radius: 50px
+            transition: 0.5s
+
+    &__checkbox:checked + .switch__slider
+        background-color: $main-color
+        border: none
+            
+    &__checkbox:checked + .switch__slider:before 
+        transform: translateX(30px)        
