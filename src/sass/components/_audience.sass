@@ -2,26 +2,41 @@
     @include box-style()
     
     &__box
+        display: grid
         grid-column: 1 / 14
         grid-row: 2 / 3 
     
     &__header
         display: flex
         justify-content: space-between
+        align-items: center
     
     &__title
         @include title()
     
     &__date
+        font-weight: 500
+        font-size: 12px
+        &::after
+            content: ''
+            display: inline-block
+            margin: 0 0 0 9px
+            width: 10px
+            height: 7px
+            background: url(../img/dashboard/dropdown.svg) center no-repeat
+            cursor: pointer
+
     &__wrap
         display: flex 
         justify-content: space-between
         align-items: center
         width: 155px   
+
     &__check-mark
         display: flex
         align-items: center
         cursor: pointer
+
         &::before
             content: ''
             display: inline-block
@@ -32,13 +47,16 @@
             background-repeat: no-repeat
             background-position: center
             background-size: 10px
+
     &__checkbox
         position: absolute
         z-index: -1
         opacity: 0
+
         &:checked + .audience__check-mark::before
             border-color: $main-color
-            background-image: url("../img/dashboard/check.svg") 
+            background-image: url("../img/dashboard/check.svg")
+             
     &__checkbox-name
         margin: 0 15px 0 0
         font-weight: 600

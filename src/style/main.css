@@ -563,16 +563,17 @@ textarea {
   margin: 0 0 0 15px;
 }
 
-.header__login-dropdown {
-  border: none;
-  background: transparent;
-  color: #fff;
+.header__login-avatar::after {
+  content: '';
+  display: inline-block;
+  margin: 0 0 0 7px;
+  width: 10px;
+  height: 7px;
+  background: url(../img/dashboard/dropdown.svg) center no-repeat;
   cursor: pointer;
 }
 
 .people {
-  display: -ms-grid;
-  display: grid;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -685,8 +686,6 @@ textarea {
 }
 
 .audience {
-  display: -ms-grid;
-  display: grid;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -700,6 +699,8 @@ textarea {
 }
 
 .audience__box {
+  display: -ms-grid;
+  display: grid;
   -ms-grid-column: 1;
   -ms-grid-column-span: 13;
   grid-column: 1 / 14;
@@ -715,6 +716,9 @@ textarea {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .audience__title {
@@ -722,6 +726,21 @@ textarea {
   font-size: 20px;
   width: 180px;
   text-align: left;
+}
+
+.audience__date {
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.audience__date::after {
+  content: '';
+  display: inline-block;
+  margin: 0 0 0 9px;
+  width: 10px;
+  height: 7px;
+  background: url(../img/dashboard/dropdown.svg) center no-repeat;
+  cursor: pointer;
 }
 
 .audience__wrap {
@@ -864,8 +883,6 @@ textarea {
 }
 
 .gender {
-  display: -ms-grid;
-  display: grid;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -892,6 +909,19 @@ textarea {
   display: grid;
   -ms-grid-columns: 7fr 2fr;
       grid-template-columns: 7fr 2fr;
+  -webkit-transform: translateY(27px);
+          transform: translateY(27px);
+}
+
+.gender__body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (71px)[8];
+      grid-template-columns: repeat(8, 71px);
+  -ms-grid-rows: 57px 57px;
+      grid-template-rows: 57px 57px;
+  -webkit-transform: translate(25px, 63px);
+          transform: translate(25px, 63px);
 }
 
 .gender__title {
@@ -911,16 +941,22 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transform: translateX(-12px);
+          transform: translateX(-12px);
 }
 
-.gender__women {
+.gender__sex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 10px 0 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 600;
+  font-size: 12px;
 }
 
-.gender__women::before {
+.gender__sex::before {
   content: '';
   display: inline-block;
   margin: 0 7px 0 0;
@@ -930,25 +966,78 @@ textarea {
   background: #E786D7;
 }
 
-.gender__men {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.gender__men::before {
-  content: '';
-  display: inline-block;
-  margin: 0 7px 0 0;
-  width: 16px;
-  height: 16px;
-  border-radius: 5px;
+.gender__sex--men::before {
   background: #7F7FD5;
 }
 
+.gender__grid-box {
+  position: relative;
+  border-left: 1px solid #4d4d4d;
+  border-top: 1px solid #4d4d4d;
+}
+
+.gender__grid-box:nth-child(n+9) {
+  border-bottom: 1px solid #4d4d4d;
+}
+
+.gender__grid-box:nth-child(8n) {
+  border-right: 1px solid #4d4d4d;
+}
+
+.gender__diagram {
+  position: absolute;
+  bottom: -12px;
+  left: calc( 50% - 21.5px);
+  font-size: 0;
+}
+
+.gender__diagram-item--left {
+  display: inline-block;
+  width: 21.53px;
+  height: 1.63px;
+  background: #7F7FD5;
+}
+
+.gender__diagram-item--right:nth-child(2n+2) {
+  display: inline-block;
+  width: 21.53px;
+  height: 1.63px;
+  background: #7F7FD5;
+}
+
+.gender__diagram-text {
+  font-weight: 500;
+  font-size: 12px;
+  color: #979797;
+  -webkit-transform: translateY(15px);
+          transform: translateY(15px);
+}
+
+.gender__percent {
+  font-weight: 500;
+  font-size: 12px;
+  color: #979797;
+}
+
+.gender__percent--up {
+  position: absolute;
+  top: -6px;
+  left: -35px;
+}
+
+.gender__percent--middle {
+  position: absolute;
+  top: 50px;
+  left: -35px;
+}
+
+.gender__percent--bottom {
+  position: absolute;
+  top: 105px;
+  left: -30px;
+}
+
 .geo {
-  display: -ms-grid;
-  display: grid;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -962,6 +1051,8 @@ textarea {
 }
 
 .geo__box {
+  display: -ms-grid;
+  display: grid;
   -ms-grid-column: 12;
   -ms-grid-column-span: 7;
   grid-column: 12 / 19;

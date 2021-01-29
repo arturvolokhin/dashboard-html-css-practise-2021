@@ -3,19 +3,34 @@
     &__box
         grid-column: 1 / 12
         grid-row: 3 / 4
+
     &__header
         display: grid
         grid-template-columns: 7fr 2fr
+        transform: translateY(27px)
+
+    &__body
+        display: grid
+        grid-template-columns: repeat(8, 71px)
+        grid-template-rows: 57px 57px
+        transform: translate(25px, 63px)
+          
     
     &__title
         @include title()
+
     &__text
         display: flex
         justify-content: space-between      
         align-items: center
-    &__women
-        display: flex;
-        margin: 0 10px 0 0
+        transform: translateX(-12px)
+            
+    &__sex
+        display: flex
+        align-items: center
+        font-weight: 600
+        font-size: 12px
+
         &::before
             content: ''
             display: inline-block
@@ -23,14 +38,58 @@
             width: 16px
             height: 16px
             border-radius: 5px
-            background: $second-color    
-    &__men
-        display: flex;
-        &::before
-            content: ''
+            background: $second-color
+
+        &--men
+
+            &::before
+                background: $main-color  
+                
+    &__grid-box
+        position: relative
+        border-left: 1px solid #4d4d4d
+        border-top: 1px solid #4d4d4d
+        &:nth-child(n+9)
+            border-bottom: 1px solid #4d4d4d
+        &:nth-child(8n)
+            border-right: 1px solid #4d4d4d  
+    &__diagram
+        position: absolute
+        bottom: -12px
+        left: calc( 50% - 21.5px)
+        font-size: 0
+        &-item--left
             display: inline-block
-            margin: 0 7px 0 0
-            width: 16px
-            height: 16px
-            border-radius: 5px
-            background: $main-color          
+            width: 21.53px
+            height: 1.63px
+            background: #7F7FD5
+        &-item--right
+            &:nth-child(2n+2)
+                display: inline-block
+                width: 21.53px
+                height: 1.63px
+                background: #7F7FD5
+        &-text
+            font-weight: 500
+            font-size: 12px
+            color: $numbers-color 
+            transform: translateY(15px) 
+    &__percent
+        font-weight: 500
+        font-size: 12px
+        color: $numbers-color 
+        &--up
+            position: absolute
+            top: -6px
+            left: -35px
+        &--middle
+            position: absolute
+            top:  50px
+            left: -35px
+        &--bottom
+            position: absolute
+            top:  105px
+            left: -30px   
+             
+                    
+                
