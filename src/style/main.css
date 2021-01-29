@@ -699,8 +699,6 @@ textarea {
 }
 
 .audience__box {
-  display: -ms-grid;
-  display: grid;
   -ms-grid-column: 1;
   -ms-grid-column-span: 13;
   grid-column: 1 / 14;
@@ -719,6 +717,23 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transform: translateY(35px);
+          transform: translateY(35px);
+}
+
+.audience__body {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (90.65px)[7];
+      grid-template-columns: repeat(7, 90.65px);
+  -ms-grid-rows: (29.5px)[4];
+      grid-template-rows: repeat(4, 29.5px);
+  -webkit-transform: translate(43px, 75px);
+          transform: translate(43px, 75px);
+  font-weight: 500;
+  font-size: 12px;
+  color: #979797;
 }
 
 .audience__title {
@@ -754,6 +769,8 @@ textarea {
       -ms-flex-align: center;
           align-items: center;
   width: 155px;
+  -webkit-transform: translateX(-35px);
+          transform: translateX(-35px);
 }
 
 .audience__check-mark {
@@ -793,6 +810,80 @@ textarea {
   margin: 0 15px 0 0;
   font-weight: 600;
   font-size: 12px;
+}
+
+.audience__grid-box {
+  position: relative;
+  border-top: 1px solid #4D4D4D;
+  border-left: 1px solid #4D4D4D;
+}
+
+.audience__grid-box:nth-child(7n) {
+  border-right: 1px solid #4D4D4D;
+}
+
+.audience__grid-box:nth-child(1n+22) {
+  border-bottom: 1px solid #4D4D4D;
+}
+
+.audience__text {
+  position: absolute;
+  bottom: -20px;
+}
+
+.audience__text::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  display: inline-block;
+  width: 6px;
+  height: 1px;
+  background: #979797;
+  -webkit-transform: translate(4px, -4px);
+          transform: translate(4px, -4px);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.audience__text--last {
+  right: -35px;
+}
+
+.audience__curve {
+  position: absolute;
+  bottom: -9px;
+  left: -1px;
+  width: 635.95px;
+}
+
+.audience__number {
+  position: absolute;
+}
+
+.audience__number::after {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 1px;
+  background: #979797;
+  -webkit-transform: translate(4px, -4px);
+          transform: translate(4px, -4px);
+}
+
+.audience__number--top {
+  top: -6px;
+  left: -17px;
+}
+
+.audience__number--middle {
+  top: 53px;
+  left: -25px;
+}
+
+.audience__number--bottom {
+  top: 110px;
+  left: -19px;
 }
 
 .device {
@@ -1019,7 +1110,7 @@ textarea {
   color: #979797;
 }
 
-.gender__percent--up {
+.gender__percent--top {
   position: absolute;
   top: -6px;
   left: -35px;
