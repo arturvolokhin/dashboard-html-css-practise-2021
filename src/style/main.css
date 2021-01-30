@@ -711,14 +711,11 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transform: translateY(35px);
-          transform: translateY(35px);
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
 }
 
 .audience__body {
@@ -729,8 +726,8 @@ textarea {
       grid-template-columns: repeat(7, 90.65px);
   -ms-grid-rows: (29.5px)[4];
       grid-template-rows: repeat(4, 29.5px);
-  -webkit-transform: translate(43px, 75px);
-          transform: translate(43px, 75px);
+  -webkit-transform: translate(43px, 60px);
+          transform: translate(43px, 60px);
   font-weight: 500;
   font-size: 12px;
   color: #979797;
@@ -741,11 +738,15 @@ textarea {
   font-size: 20px;
   width: 180px;
   text-align: left;
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
 }
 
 .audience__date {
   font-weight: 500;
   font-size: 12px;
+  -webkit-transform: translateX(150px);
+          transform: translateX(150px);
 }
 
 .audience__date::after {
@@ -769,8 +770,8 @@ textarea {
       -ms-flex-align: center;
           align-items: center;
   width: 155px;
-  -webkit-transform: translateX(-35px);
-          transform: translateX(-35px);
+  -webkit-transform: translateX(190px);
+          transform: translateX(190px);
 }
 
 .audience__check-mark {
@@ -828,13 +829,13 @@ textarea {
 
 .audience__text {
   position: absolute;
-  bottom: -20px;
+  bottom: -23px;
 }
 
 .audience__text::before {
   content: '';
   position: absolute;
-  top: -4px;
+  top: -7px;
   left: -4px;
   display: inline-block;
   width: 6px;
@@ -1011,8 +1012,8 @@ textarea {
       grid-template-columns: repeat(8, 71px);
   -ms-grid-rows: 57px 57px;
       grid-template-rows: 57px 57px;
-  -webkit-transform: translate(25px, 63px);
-          transform: translate(25px, 63px);
+  -webkit-transform: translate(30px, 63px);
+          transform: translate(30px, 63px);
 }
 
 .gender__title {
@@ -1110,6 +1111,16 @@ textarea {
   color: #979797;
 }
 
+.gender__percent::after {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 1px;
+  background: #979797;
+  -webkit-transform: translate(4px, -4px);
+          transform: translate(4px, -4px);
+}
+
 .gender__percent--top {
   position: absolute;
   top: -6px;
@@ -1118,13 +1129,13 @@ textarea {
 
 .gender__percent--middle {
   position: absolute;
-  top: 50px;
+  top: 51px;
   left: -35px;
 }
 
 .gender__percent--bottom {
   position: absolute;
-  top: 105px;
+  top: 106px;
   left: -30px;
 }
 
