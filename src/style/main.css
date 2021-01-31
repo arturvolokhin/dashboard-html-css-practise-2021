@@ -465,11 +465,46 @@ textarea {
   background: #282C31;
   border: 1px solid #4D4D4D;
   border-radius: 14px 0 0 14px;
+  overflow: hidden;
 }
 
 .navbar__list {
   margin: 150px auto 142px;
   width: 25px;
+}
+
+.navbar__item:hover {
+  -webkit-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
+}
+
+.navbar__item::after {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 10px;
+  height: 50px;
+  background: #7F7FD5;
+  -webkit-transform: translate(-60px, -76px);
+          transform: translate(-60px, -76px);
+  border-radius: 10px;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+.navbar__item:hover::after {
+  -webkit-transform: translate(-53px, -76px);
+          transform: translate(-53px, -76px);
+}
+
+.navbar__item--transform::after {
+  -webkit-transform: translate(-53px, -90px);
+          transform: translate(-53px, -90px);
+}
+
+.navbar__item--transform:hover::after {
+  -webkit-transform: translate(-53px, -90px);
+          transform: translate(-53px, -90px);
 }
 
 .navbar__link {
@@ -557,6 +592,8 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transform: translate(-12px);
+          transform: translate(-12px);
 }
 
 .header__login-name {
