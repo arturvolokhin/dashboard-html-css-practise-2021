@@ -1,4 +1,4 @@
-Макет свёрстан с помощью grid-layout и flexbox.
+Макет свёрстан с помощью grid-layout и flexbox через препроцессор SASS.
 
 Вся графика нарисована на css, либо c помощью svg-sprites. 
 
