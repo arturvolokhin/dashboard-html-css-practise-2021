@@ -783,8 +783,8 @@ textarea {
 .audience__date {
   font-weight: 500;
   font-size: 12px;
-  -webkit-transform: translateX(150px);
-          transform: translateX(150px);
+  -webkit-transform: translateX(185px);
+          transform: translateX(185px);
 }
 
 .audience__date::after {
@@ -808,8 +808,8 @@ textarea {
       -ms-flex-align: center;
           align-items: center;
   width: 155px;
-  -webkit-transform: translateX(190px);
-          transform: translateX(190px);
+  -webkit-transform: translateX(225px);
+          transform: translateX(225px);
 }
 
 .audience__check-mark {
