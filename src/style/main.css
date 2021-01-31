@@ -1018,8 +1018,8 @@ textarea {
   text-align: left;
   font-weight: 600;
   font-size: 12px;
-  -webkit-transform: translate(80px, 50px);
-          transform: translate(80px, 50px);
+  -webkit-transform: translate(73px, 50px);
+          transform: translate(73px, 50px);
 }
 
 .device__text-desktop {
