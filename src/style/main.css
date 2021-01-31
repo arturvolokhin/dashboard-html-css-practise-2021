@@ -1117,8 +1117,8 @@ textarea {
   display: grid;
   -ms-grid-columns: (71px)[8];
       grid-template-columns: repeat(8, 71px);
-  -ms-grid-rows: 57px 57px;
-      grid-template-rows: 57px 57px;
+  -ms-grid-rows: 60px 60px;
+      grid-template-rows: 60px 60px;
   -webkit-transform: translate(30px, 63px);
           transform: translate(30px, 63px);
 }
@@ -1193,14 +1193,80 @@ textarea {
   display: inline-block;
   width: 21.53px;
   height: 1.63px;
-  background: #7F7FD5;
+  background: #E786D7;
+  border-radius: 5px 5px 0 0;
 }
 
-.gender__diagram-item--right:nth-child(2n+2) {
+.gender__diagram-item--left-first {
+  height: 1.63px;
+}
+
+.gender__diagram-item--left-second {
+  height: 1.63px;
+}
+
+.gender__diagram-item--left-third {
+  height: 1.63px;
+}
+
+.gender__diagram-item--left-fourth {
+  height: 100px;
+}
+
+.gender__diagram-item--left-fifth {
+  height: 58.71px;
+}
+
+.gender__diagram-item--left-sixth {
+  height: 1.63px;
+}
+
+.gender__diagram-item--left-seventh {
+  height: 29.87px;
+}
+
+.gender__diagram-item--left-eighth {
+  height: 1.63px;
+}
+
+.gender__diagram-item--right {
   display: inline-block;
   width: 21.53px;
   height: 1.63px;
   background: #7F7FD5;
+  border-radius: 5px 5px 0 0;
+}
+
+.gender__diagram-item--right-first {
+  height: 1.63px;
+}
+
+.gender__diagram-item--right-second {
+  height: 58.71px;
+}
+
+.gender__diagram-item--right-third {
+  height: 58.26px;
+}
+
+.gender__diagram-item--right-fourth {
+  height: 59px;
+}
+
+.gender__diagram-item--right-fifth {
+  height: 1.63px;
+}
+
+.gender__diagram-item--right-sixth {
+  height: 1.63px;
+}
+
+.gender__diagram-item--right-seventh {
+  height: 1.63px;
+}
+
+.gender__diagram-item--right-eighth {
+  height: 23.08px;
 }
 
 .gender__diagram-text {

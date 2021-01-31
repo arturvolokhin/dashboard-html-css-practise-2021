@@ -1,5 +1,6 @@
 .gender
     @include box-style()
+
     &__box
         grid-column: 1 / 12
         grid-row: 3 / 4
@@ -12,7 +13,7 @@
     &__body
         display: grid
         grid-template-columns: repeat(8, 71px)
-        grid-template-rows: 57px 57px
+        grid-template-rows: 60px 60px
         transform: translate(30px, 63px)
           
     
@@ -49,35 +50,93 @@
         position: relative
         border-left: 1px solid #4d4d4d
         border-top: 1px solid #4d4d4d
+
         &:nth-child(n+9)
             border-bottom: 1px solid #4d4d4d
+
         &:nth-child(8n)
             border-right: 1px solid #4d4d4d  
+   
     &__diagram
         position: absolute
         bottom: -12px
         left: calc( 50% - 21.5px)
         font-size: 0
+
         &-item--left
             display: inline-block
             width: 21.53px
             height: 1.63px
-            background: #7F7FD5
-        &-item--right
-            &:nth-child(2n+2)
-                display: inline-block
-                width: 21.53px
+            background: $second-color
+            border-radius: 5px 5px 0 0
+
+            &-first
                 height: 1.63px
-                background: #7F7FD5
+
+            &-second
+                height: 1.63px   
+
+            &-third
+                height: 1.63px
+
+            &-fourth
+                height: 100px
+
+            &-fifth
+                height: 58.71px
+
+            &-sixth
+                height: 1.63px
+
+            &-seventh
+                height: 29.87px
+
+            &-eighth
+                height: 1.63px         
+
+        &-item--right
+            display: inline-block
+            width: 21.53px
+            height: 1.63px
+            background: $main-color
+            border-radius: 5px 5px 0 0
+
+            &-first
+                height: 1.63px
+
+            &-second
+                height: 58.71px
+
+            &-third
+                height: 58.26px
+
+            &-fourth
+                height: 59px
+
+            &-fifth
+                height: 1.63px
+
+            &-sixth
+                height: 1.63px
+
+            &-seventh
+                height: 1.63px
+
+            &-eighth
+                height: 23.08px       
+
+
         &-text
             font-weight: 500
             font-size: 12px
             color: $numbers-color 
             transform: translateY(15px) 
+
     &__percent
         font-weight: 500
         font-size: 12px
-        color: $numbers-color 
+        color: $numbers-color
+
         &::after
             content: ''
             display: inline-block
@@ -85,14 +144,17 @@
             height: 1px
             background: $numbers-color
             transform: translate(4px, -4px)
+
         &--top
             position: absolute
             top: -6px
             left: -35px
+
         &--middle
             position: absolute
             top:  51px
             left: -35px
+
         &--bottom
             position: absolute
             top:  106px
