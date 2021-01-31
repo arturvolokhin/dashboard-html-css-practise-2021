@@ -1,11 +1,13 @@
 .header
     display: flex
     justify-content: space-between
+
     &__content
         display: flex
         align-items: center
         justify-content: space-between
         width: 369px
+
     &__title
         font-family: Gilroy
         font-style: normal
@@ -13,9 +15,11 @@
         font-size: 30px
         line-height: 36px
         color: #CACACA  
+
     &__form
         position: relative
         width: 153px
+
         &-search
             width: 153px
             height: 32px
@@ -26,6 +30,7 @@
             background-color: transparent
             border-radius: 8px
             outline: none
+
         &-button 
             position: absolute
             top: calc(50% - 6px)
@@ -36,18 +41,26 @@
             outline: none
             cursor: pointer
             border: none
+
     &__notification
-        cursor: pointer        
+        cursor: pointer
+        width: 21px
+        height: 23px
+        &:hover
+            animation: shake 1s linear     
+
     &__login 
         display: flex
         align-items: center
         transform: translate(-12px)
-
+        
         &-name
             font-weight: 600
             font-size: 20px
+
         &-avatar
             margin: 0 0 0 15px
+
             &::after
                 content: ''
                 display: inline-block
