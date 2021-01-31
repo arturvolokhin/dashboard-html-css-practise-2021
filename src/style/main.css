@@ -389,7 +389,7 @@ textarea {
 .container {
   position: relative;
   width: 1280px;
-  height: 880px;
+  min-height: 880px;
   background-color: #212427;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -431,11 +431,30 @@ textarea {
   display: grid;
   -ms-grid-columns: (1fr)[18];
       grid-template-columns: repeat(18, 1fr);
-  -ms-grid-rows: 148px 1fr 1fr;
-      grid-template-rows: 148px 1fr 1fr;
+  -ms-grid-rows: 148px 245px 245px;
+      grid-template-rows: 148px 245px 245px;
   grid-gap: 30px;
   margin: 38px 0 0;
   height: calc(100% - 88px);
+}
+
+@media (max-width: 1250px) {
+  .wrapper {
+    height: 1500px;
+  }
+  .container {
+    height: 1200px;
+  }
+  .dashboard__wrapper {
+    -ms-grid-rows: 148px 245px 245px 245px;
+        grid-template-rows: 148px 245px 245px 245px;
+  }
+  .geo__box {
+    -ms-grid-row: 4;
+    grid-row: 4;
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
 }
 
 @-webkit-keyframes shake {
@@ -490,17 +509,6 @@ textarea {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
-}
-
-.circle {
-  position: absolute;
-  width: 283px;
-  height: 283px;
-  right: -60px;
-  top: 993px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#7F7FD5), to(#E786D7));
-  background: linear-gradient(180deg, #7F7FD5 0%, #E786D7 100%);
-  border-radius: 50%;
 }
 
 .navbar {
@@ -684,6 +692,7 @@ textarea {
   border: 1px solid #4D4D4D;
   border-radius: 13px;
   padding: 0 24px;
+  min-width: 341px;
 }
 
 .people__title {
@@ -796,6 +805,7 @@ textarea {
   border: 1px solid #4D4D4D;
   border-radius: 13px;
   padding: 0 24px;
+  min-width: 775px;
 }
 
 .audience__box {
@@ -1040,6 +1050,7 @@ textarea {
   border: 1px solid #4D4D4D;
   border-radius: 13px;
   padding: 22px 10px 22px 24px;
+  min-width: 279px;
 }
 
 .device__box {
@@ -1153,6 +1164,7 @@ textarea {
   border: 1px solid #4D4D4D;
   border-radius: 13px;
   padding: 0 24px;
+  min-width: 651px;
 }
 
 .gender__box {
@@ -1383,6 +1395,7 @@ textarea {
   border: 1px solid #4D4D4D;
   border-radius: 13px;
   padding: 0 24px;
+  min-width: 403px;
 }
 
 .geo__box {
