@@ -1,15 +1,165 @@
+
 @media (max-width: 1250px)
+
     .wrapper
-        height: 1500px
+        height: 1550px
+
     .container
-        height: 1200px
+        height: 1250px
+
     .dashboard
+
         &__wrapper
-            grid-template-rows: 148px 245px 245px 245px
+            grid-template-rows: 148px 148px 148px 242px 242px
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+            grid-template-areas: "friends friends friends geo geo""visitors visitors visitors geo geo""followers followers followers geo geo""audience audience audience device device""gender gender gender gender gender"
+
+    .people
+        min-width: auto
+        &__box-left
+            grid-area: friends
+
+        &__box-middle
+            grid-area: visitors
+
+        &__box-right
+            grid-area: followers
+
+    .audience
+        grid-area: audience
+        min-width: auto
+
+    .device
+        grid-area: device
+        min-width: auto
+
+    .gender
+        grid-area: gender
+        min-width: auto
+        
+
+        &__body
+            justify-content: center    
 
     .geo
-        &__box
-            grid-row: 4
-            grid-column: 1            
-            
+        grid-area: geo
+        min-width: auto
+        display: flex
+        flex-flow: row wrap
 
+        &__body
+            display: flex
+            flex-flow: row wrap
+
+        &__item
+            width: 100%
+            margin: 15px 0
+            &:nth-child(2n)
+                transform: translate(0)
+                
+        &__progress
+            width: 100%
+
+        &__header
+            margin: 20px 0 0
+
+        &__switch
+            display: flex
+            justify-content: space-between
+
+
+@media (max-width: 1024px)
+
+
+    .dashboard
+        padding: 45px
+    
+    .navbar
+        height: auto
+        padding: 0
+        border: 0
+        background: none
+        left: 35px
+        top: 5px
+        display: flex
+        align-items: center
+        width: 135px
+        justify-content: space-between
+
+        &__list
+            display: none
+
+        &__logo-wrap
+            transform: none  
+
+
+
+
+
+
+@media (max-width: 800px)
+
+    .wrapper
+        height: 1650px
+
+    .container
+        height: 1350px
+    
+    .dashboard
+
+        &__wrapper
+            grid-template-rows: 148px 148px 242px 242px 242px
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+            grid-gap: 20px
+            grid-template-areas: "friends friends friends visitors visitors visitors""followers followers followers geo geo geo""device device device geo geo geo""audience audience audience audience audience audience" "gender gender gender gender gender gender"
+
+    .geo
+        &__item
+            margin: 10px 0
+
+    
+
+
+
+
+@media (max-width: 650px)  
+    
+    .wrapper
+        height: 2250px
+
+    .container
+        height: 1950px
+
+    .header
+        &__form
+            display: none
+
+        &__login-name
+            display: none    
+
+        &__content
+            width: auto
+
+        &__notification
+            transform: translate(20px, -40px)
+
+    .dashboard    
+        &__wrapper
+            grid-template-rows: 148px 148px 148px 242px 242px 242px 450px
+            grid-template-columns: 100%
+            grid-gap: 20px
+            grid-template-areas: "friends""visitors""followers""audience""gender""device""geo" 
+
+    .geo
+        &__body
+            width: 100%
+      
+
+
+
+@media (max-width: 339px)
+
+    .header
+
+        &__notification
+            transform: translate(20px, -48px); 

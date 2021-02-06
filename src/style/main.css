@@ -438,25 +438,6 @@ textarea {
   height: calc(100% - 88px);
 }
 
-@media (max-width: 1250px) {
-  .wrapper {
-    height: 1500px;
-  }
-  .container {
-    height: 1200px;
-  }
-  .dashboard__wrapper {
-    -ms-grid-rows: 148px 245px 245px 245px;
-        grid-template-rows: 148px 245px 245px 245px;
-  }
-  .geo__box {
-    -ms-grid-row: 4;
-    grid-row: 4;
-    -ms-grid-column: 1;
-    grid-column: 1;
-  }
-}
-
 @-webkit-keyframes shake {
   0% {
     -webkit-transform: rotate(0deg);
@@ -754,7 +735,7 @@ textarea {
   font-weight: 700;
   font-size: 20px;
   text-align: left;
-  width: 180px;
+  width: 85%;
 }
 
 .people__value {
@@ -804,6 +785,7 @@ textarea {
 }
 
 .people__box-left {
+  grid-area: friends;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -821,6 +803,7 @@ textarea {
 }
 
 .people__box-middle {
+  grid-area: visitors;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -838,6 +821,7 @@ textarea {
 }
 
 .people__box-right {
+  grid-area: followers;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -865,6 +849,7 @@ textarea {
   border: 1px solid #4D4D4D;
   border-radius: 13px;
   padding: 0 24px;
+  grid-area: audience;
   min-width: 775px;
 }
 
@@ -875,6 +860,7 @@ textarea {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2 / 3;
+  overflow-x: auto;
 }
 
 .audience__header {
@@ -907,11 +893,15 @@ textarea {
   font-weight: 700;
   font-size: 20px;
   text-align: left;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   -webkit-transform: translateX(5px);
           transform: translateX(5px);
 }
 
 .audience__date {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   font-weight: 500;
   font-size: 12px;
   -webkit-transform: translateX(185px);
@@ -938,6 +928,8 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   width: 155px;
   -webkit-transform: translateX(225px);
           transform: translateX(225px);
@@ -1087,25 +1079,26 @@ textarea {
 
 .audience__dot--fifth {
   top: 87px;
-  right: 358px;
+  left: 361px;
 }
 
 .audience__dot--sixth {
   top: 57px;
-  right: 269px;
+  left: 450px;
 }
 
 .audience__dot--seventh {
   top: 8px;
-  right: 177px;
+  left: 542px;
 }
 
 .audience__dot--eighth {
   top: 78px;
-  right: 89px;
+  left: 630px;
 }
 
 .device {
+  grid-area: device;
   background: #282C31;
   border: 1px solid #4D4D4D;
   border-radius: 13px;
@@ -1224,6 +1217,7 @@ textarea {
   border: 1px solid #4D4D4D;
   border-radius: 13px;
   padding: 0 24px;
+  grid-area: gender;
   min-width: 651px;
 }
 
@@ -1234,6 +1228,7 @@ textarea {
   -ms-grid-row: 3;
   -ms-grid-row-span: 1;
   grid-row: 3 / 4;
+  overflow-x: auto;
 }
 
 .gender__header {
@@ -1455,6 +1450,7 @@ textarea {
   border: 1px solid #4D4D4D;
   border-radius: 13px;
   padding: 0 24px;
+  grid-area: geo;
   min-width: 403px;
 }
 
@@ -1467,16 +1463,36 @@ textarea {
   -ms-grid-row: 3;
   -ms-grid-row-span: 1;
   grid-row: 3 / 4;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: (1fr)[4];
-      grid-template-rows: repeat(4, 1fr);
-  grid-column-gap: 34px;
-  grid-auto-rows: -webkit-max-content;
-  grid-auto-rows: max-content;
-  grid-row-gap: 16px;
-  -ms-grid-rows: 65px;
-      grid-template-rows: 65px;
+}
+
+.geo__header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 1fr;
+      grid-template-columns: 3fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 0 15px;
+}
+
+.geo__item {
+  margin: 0 0 15px;
+}
+
+.geo__item:nth-child(2n) {
+  -webkit-transform: translate(75px);
+          transform: translate(75px);
+}
+
+.geo__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 
 .geo__title {
@@ -1486,16 +1502,22 @@ textarea {
 }
 
 .geo__switch {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 3fr 1fr;
-      grid-template-columns: 3fr 1fr;
-  justify-items: end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 80px;
 }
 
 .geo__link {
   font-weight: 600;
   font-size: 12px;
+}
+
+.geo__link--active {
+  color: #979797;
 }
 
 .geo__link:hover {
@@ -1549,27 +1571,227 @@ textarea {
 }
 
 .geo__progress--russia::before {
-  width: 128px;
+  width: 91.42%;
 }
 
 .geo__progress--china::before {
-  width: 13px;
+  width: 9.28%;
 }
 
 .geo__progress--ukraine::before {
-  width: 5px;
+  width: 3.57%;
 }
 
 .geo__progress--usa::before {
-  width: 5px;
+  width: 3.57%;
 }
 
 .geo__progress--mongolia::before {
-  width: 4px;
+  width: 2.85%;
 }
 
 .geo__progress--other::before {
-  width: 15px;
+  width: 10.71%;
+}
+
+@media (max-width: 1250px) {
+  .wrapper {
+    height: 1550px;
+  }
+  .container {
+    height: 1250px;
+  }
+  .dashboard__wrapper {
+    -ms-grid-rows: 148px 148px 148px 242px 242px;
+        grid-template-rows: 148px 148px 148px 242px 242px;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: "friends friends friends geo geo" "visitors visitors visitors geo geo" "followers followers followers geo geo" "audience audience audience device device" "gender gender gender gender gender";
+  }
+  .people {
+    min-width: auto;
+  }
+  .people__box-left {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: friends;
+  }
+  .people__box-middle {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: visitors;
+  }
+  .people__box-right {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: followers;
+  }
+  .audience {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: audience;
+    min-width: auto;
+  }
+  .device {
+    -ms-grid-row: 4;
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 2;
+    grid-area: device;
+    min-width: auto;
+  }
+  .gender {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+    grid-area: gender;
+    min-width: auto;
+  }
+  .gender__body {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .geo {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 2;
+    grid-area: geo;
+    min-width: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+  }
+  .geo__body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+  }
+  .geo__item {
+    width: 100%;
+    margin: 15px 0;
+  }
+  .geo__item:nth-child(2n) {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  .geo__progress {
+    width: 100%;
+  }
+  .geo__header {
+    margin: 20px 0 0;
+  }
+  .geo__switch {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (max-width: 1024px) {
+  .dashboard {
+    padding: 45px;
+  }
+  .navbar {
+    height: auto;
+    padding: 0;
+    border: 0;
+    background: none;
+    left: 35px;
+    top: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 135px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .navbar__list {
+    display: none;
+  }
+  .navbar__logo-wrap {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .wrapper {
+    height: 1650px;
+  }
+  .container {
+    height: 1350px;
+  }
+  .dashboard__wrapper {
+    -ms-grid-rows: 148px 148px 242px 242px 242px;
+        grid-template-rows: 148px 148px 242px 242px 242px;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+        grid-template-areas: "friends friends friends visitors visitors visitors" "followers followers followers geo geo geo" "device device device geo geo geo" "audience audience audience audience audience audience" "gender gender gender gender gender gender";
+  }
+  .geo__item {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 650px) {
+  .wrapper {
+    height: 2250px;
+  }
+  .container {
+    height: 1950px;
+  }
+  .header__form {
+    display: none;
+  }
+  .header__login-name {
+    display: none;
+  }
+  .header__content {
+    width: auto;
+  }
+  .header__notification {
+    -webkit-transform: translate(20px, -40px);
+            transform: translate(20px, -40px);
+  }
+  .dashboard__wrapper {
+    -ms-grid-rows: 148px 148px 148px 242px 242px 242px 450px;
+        grid-template-rows: 148px 148px 148px 242px 242px 242px 450px;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    grid-gap: 20px;
+        grid-template-areas: "friends" "visitors" "followers" "audience" "gender" "device" "geo";
+  }
+  .geo__body {
+    width: 100%;
+  }
+}
+
+@media (max-width: 339px) {
+  .header__notification {
+    -webkit-transform: translate(20px, -48px);
+            transform: translate(20px, -48px);
+  }
 }
 
 a {

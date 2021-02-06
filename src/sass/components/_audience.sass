@@ -1,10 +1,12 @@
 .audience
     @include box-style()
+    grid-area: audience
     min-width: 775px
     
     &__box
         grid-column: 1 / 14
         grid-row: 2 / 3 
+        overflow-x: auto
     
     &__header
         display: flex
@@ -23,9 +25,11 @@
     
     &__title
         @include title()
+        flex-shrink: 0
         transform: translateX(5px)
     
     &__date
+        flex-shrink: 0
         font-weight: 500
         font-size: 12px
         transform: translateX(185px)
@@ -43,6 +47,7 @@
         display: flex 
         justify-content: space-between
         align-items: center
+        flex-shrink: 0
         width: 155px
         transform: translateX(225px)
 
@@ -157,16 +162,16 @@
 
         &--fifth
             top: 87px
-            right: 358px
+            left: 361px
 
         &--sixth
             top: 57px
-            right: 269px
+            left: 450px
 
         &--seventh
             top: 8px
-            right: 177px
+            left: 542px
             
         &--eighth                        
             top: 78px
-            right: 89px
+            left: 630px

@@ -1,28 +1,41 @@
 .geo
     @include box-style()
+    grid-area: geo
     min-width: 403px
     &__box
         display: grid
         grid-column: 12 / 19
         grid-row: 3 / 4
-        grid-template-columns: 1fr 1fr
-        grid-template-rows: repeat(4, 1fr)
-        grid-column-gap: 34px
-        grid-auto-rows: max-content
-        grid-row-gap: 16px
-        grid-template-rows: 65px
+
+    &__header
+        display: grid
+        grid-template-columns: 3fr 1fr
+        align-items: center
+        margin: 20px 0 15px
+
+    &__item
+        margin: 0 0 15px
+        &:nth-child(2n)
+            transform: translate(75px)   
+
+    &__body
+        display: flex
+        flex-flow: row wrap        
         
     &__title
         @include title()
 
     &__switch
-        display: grid
-        grid-template-columns: 3fr 1fr
-        justify-items: end
+        display: flex
+        justify-content: space-between
+        width: 80px
 
     &__link
         font-weight: 600
         font-size: 12px
+
+        &--active
+            color: $numbers-color
 
         &:hover
             color: $numbers-color
@@ -62,17 +75,17 @@
             background: #7F7FD5
             border-radius: 6px
         &--russia::before
-            width: 128px
+            width: 91.42%
         &--china::before
-            width: 13px
+            width: 9.28%
         &--ukraine::before
-            width: 5px
+            width: 3.57%
         &--usa::before
-            width: 5px
+            width: 3.57%
         &--mongolia::before
-            width: 4px
+            width: 2.85%
         &--other::before
-            width: 15px    
+            width: 10.71%    
 
                 
 
