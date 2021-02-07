@@ -1,21 +1,29 @@
 .people
     @include box-style()
     min-width: 341px;
+
     &__title
         @include title()
         width: 85%
+
     &__value
         @include value()
+
     &__circle
         @include circle()
+
     &__rating
         @include rating()
+
         &--arrow-up::after
             @include arrow-up()
+
         &--arrow-down::after
             @include arrow-down()
+
     &__dropdown
         cursor: pointer
+
         &:hover
             animation: dropdown 1s linear  
                
@@ -26,6 +34,7 @@
     justify-content: space-between
     grid-column: 1 / 7
     grid-row: 1 / 2
+
 .people__box-middle
     grid-area: visitors
     display: flex
@@ -33,6 +42,7 @@
     justify-content: space-between
     grid-column: 7 / 13
     grid-row: 1 / 2
+    
 .people__box-right
     grid-area: followers
     display: flex
