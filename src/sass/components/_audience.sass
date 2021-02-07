@@ -34,13 +34,8 @@
         transform: translateX(185px)
         
         &::after
-            content: ''
-            display: inline-block
-            margin: 0 0 0 9px
-            width: 10px
-            height: 7px
-            background: url(../img/dashboard/dropdown.svg) center no-repeat
-            cursor: pointer
+            @include dropdown()
+            transform: rotate(-45deg) translate(9px, 5px)
 
     &__wrap
         display: flex 

@@ -710,10 +710,12 @@ textarea {
 .header__login-avatar::after {
   content: '';
   display: inline-block;
-  margin: 0 0 0 7px;
-  width: 10px;
+  width: 7px;
   height: 7px;
-  background: url(../img/dashboard/dropdown.svg) center no-repeat;
+  border-bottom: 1px solid #CACACA;
+  border-left: 1px solid #CACACA;
+  -webkit-transform: rotate(-45deg) translate(7px, 7px);
+          transform: rotate(-45deg) translate(7px, 7px);
   cursor: pointer;
 }
 
@@ -910,11 +912,15 @@ textarea {
 .audience__date::after {
   content: '';
   display: inline-block;
-  margin: 0 0 0 9px;
-  width: 10px;
+  width: 7px;
   height: 7px;
-  background: url(../img/dashboard/dropdown.svg) center no-repeat;
+  border-bottom: 1px solid #CACACA;
+  border-left: 1px solid #CACACA;
+  -webkit-transform: rotate(-45deg) translate(7px, 7px);
+          transform: rotate(-45deg) translate(7px, 7px);
   cursor: pointer;
+  -webkit-transform: rotate(-45deg) translate(9px, 5px);
+          transform: rotate(-45deg) translate(9px, 5px);
 }
 
 .audience__wrap {
