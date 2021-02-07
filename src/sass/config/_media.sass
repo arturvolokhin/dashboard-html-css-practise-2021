@@ -10,7 +10,7 @@
     .dashboard
 
         &__wrapper
-            grid-template-rows: 148px 148px 148px 242px 242px
+            grid-template-rows: 148px 148px 148px 242px 280px
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr
             grid-template-areas: "friends friends friends geo geo""visitors visitors visitors geo geo""followers followers followers geo geo""audience audience audience device device""gender gender gender gender gender"
 
@@ -28,6 +28,7 @@
     .audience
         grid-area: audience
         min-width: auto
+        overflow-x: auto
 
     .device
         grid-area: device
@@ -36,10 +37,13 @@
     .gender
         grid-area: gender
         min-width: auto
+        overflow-x: auto
         
 
         &__body
-            justify-content: center    
+            justify-content: center
+            grid-template-columns: repeat(8, 100px)
+            grid-template-rows: 70px 70px
 
     .geo
         grid-area: geo
@@ -70,6 +74,9 @@
 
 @media (max-width: 1024px)
 
+    .wrapper
+        height: 1250px
+
 
     .dashboard
         padding: 45px
@@ -90,7 +97,13 @@
             display: none
 
         &__logo-wrap
-            transform: none  
+            transform: none
+
+    .gender
+
+        &__body
+            grid-template-columns: repeat(8, 71px)
+            grid-template-rows: 60px 60px
 
 
 
@@ -100,7 +113,7 @@
 @media (max-width: 800px)
 
     .wrapper
-        height: 1600px
+        height: 1300px
 
     .container
         height: 1300px
@@ -125,7 +138,7 @@
 @media (max-width: 650px)  
     
     .wrapper
-        height: 2250px
+        height: 1950px
 
     .container
         height: 1950px
