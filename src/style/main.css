@@ -1711,6 +1711,10 @@ textarea {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+  .navbar__logo-wrap:hover {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -1780,6 +1784,9 @@ textarea {
   .container {
     height: 1950px;
   }
+  .dashboard {
+    padding: 40px 20px 0;
+  }
   .dashboard__wrapper {
     -ms-grid-rows: 148px 148px 148px 242px 270px 242px 450px;
         grid-template-rows: 148px 148px 148px 242px 270px 242px 450px;
@@ -1798,8 +1805,12 @@ textarea {
     width: auto;
   }
   .header__notification {
-    -webkit-transform: translate(20px, -40px);
-            transform: translate(20px, -40px);
+    -webkit-transform: translate(30px, -35px);
+            transform: translate(30px, -35px);
+  }
+  .header__notification:hover {
+    -webkit-animation: none;
+            animation: none;
   }
   .gender__body {
     -webkit-box-pack: unset;
@@ -1837,12 +1848,15 @@ textarea {
   .geo__body {
     width: 100%;
   }
+  .navbar {
+    left: 5px;
+  }
 }
 
 @media (max-width: 355px) {
   .header__notification {
-    -webkit-transform: translate(20px, -48px);
-            transform: translate(20px, -48px);
+    -webkit-transform: translate(20px, -35px);
+            transform: translate(20px, -35px);
   }
   .device__text {
     display: -webkit-box;

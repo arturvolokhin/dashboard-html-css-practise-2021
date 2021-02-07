@@ -71,6 +71,15 @@
             display: flex
             justify-content: space-between
 
+    .navbar
+        &__logo
+
+            &-wrap
+
+                &:hover
+                    box-shadow: none
+
+
 
 @media (max-width: 1024px)
 
@@ -143,7 +152,8 @@
     .container
         height: 1950px
 
-    .dashboard    
+    .dashboard
+        padding: 40px 20px 0
         &__wrapper
             grid-template-rows: 148px 148px 148px 242px 270px 242px 450px
             grid-template-columns: 100%
@@ -161,7 +171,9 @@
             width: auto
 
         &__notification
-            transform: translate(20px, -40px)
+            transform: translate(30px, -35px)
+            &:hover
+                animation: none
 
     .gender
 
@@ -193,6 +205,9 @@
     .geo
         &__body
             width: 100%
+
+    .navbar
+        left: 5px        
       
 
 
@@ -202,7 +217,7 @@
     .header
 
         &__notification
-            transform: translate(20px, -48px)
+            transform: translate(20px, -35px)
 
     .device
 
