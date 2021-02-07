@@ -1604,6 +1604,7 @@ textarea {
   }
   .container {
     height: 1250px;
+    border-radius: 0;
   }
   .dashboard__wrapper {
     -ms-grid-rows: 148px 148px 148px 242px 280px;
@@ -1788,8 +1789,8 @@ textarea {
     padding: 40px 20px 0;
   }
   .dashboard__wrapper {
-    -ms-grid-rows: 148px 148px 148px 242px 270px 242px 450px;
-        grid-template-rows: 148px 148px 148px 242px 270px 242px 450px;
+    -ms-grid-rows: 148px 148px 148px 260px 270px 242px 450px;
+        grid-template-rows: 148px 148px 148px 260px 270px 242px 450px;
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
     grid-gap: 20px;
