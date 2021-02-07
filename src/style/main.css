@@ -1736,10 +1736,10 @@ textarea {
 
 @media (max-width: 800px) {
   .wrapper {
-    height: 1650px;
+    height: 1600px;
   }
   .container {
-    height: 1350px;
+    height: 1300px;
   }
   .dashboard__wrapper {
     -ms-grid-rows: 148px 148px 242px 242px 242px;
@@ -1761,6 +1761,14 @@ textarea {
   .container {
     height: 1950px;
   }
+  .dashboard__wrapper {
+    -ms-grid-rows: 148px 148px 148px 242px 270px 242px 450px;
+        grid-template-rows: 148px 148px 148px 242px 270px 242px 450px;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    grid-gap: 20px;
+        grid-template-areas: "friends" "visitors" "followers" "audience" "gender" "device" "geo";
+  }
   .header__form {
     display: none;
   }
@@ -1774,23 +1782,64 @@ textarea {
     -webkit-transform: translate(20px, -40px);
             transform: translate(20px, -40px);
   }
-  .dashboard__wrapper {
-    -ms-grid-rows: 148px 148px 148px 242px 242px 242px 450px;
-        grid-template-rows: 148px 148px 148px 242px 242px 242px 450px;
-    -ms-grid-columns: 100%;
-        grid-template-columns: 100%;
-    grid-gap: 20px;
-        grid-template-areas: "friends" "visitors" "followers" "audience" "gender" "device" "geo";
+  .gender__body {
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+  }
+  .gender__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .gender__text {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 75px;
+    -webkit-transform: translate(20px);
+            transform: translate(20px);
+  }
+  .gender__sex--women {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  .audience__body {
+    -webkit-transform: translate(15px, 60px);
+            transform: translate(15px, 60px);
   }
   .geo__body {
     width: 100%;
   }
 }
 
-@media (max-width: 339px) {
+@media (max-width: 355px) {
   .header__notification {
     -webkit-transform: translate(20px, -48px);
             transform: translate(20px, -48px);
+  }
+  .device__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transform: translate(10px, 10px);
+            transform: translate(10px, 10px);
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .gender__sex--women {
+    -webkit-transform: translate(0);
+            transform: translate(0);
   }
 }
 

@@ -100,10 +100,10 @@
 @media (max-width: 800px)
 
     .wrapper
-        height: 1650px
+        height: 1600px
 
     .container
-        height: 1350px
+        height: 1300px
     
     .dashboard
 
@@ -130,6 +130,13 @@
     .container
         height: 1950px
 
+    .dashboard    
+        &__wrapper
+            grid-template-rows: 148px 148px 148px 242px 270px 242px 450px
+            grid-template-columns: 100%
+            grid-gap: 20px
+            grid-template-areas: "friends""visitors""followers""audience""gender""device""geo"     
+
     .header
         &__form
             display: none
@@ -143,12 +150,32 @@
         &__notification
             transform: translate(20px, -40px)
 
-    .dashboard    
-        &__wrapper
-            grid-template-rows: 148px 148px 148px 242px 242px 242px 450px
-            grid-template-columns: 100%
-            grid-gap: 20px
-            grid-template-areas: "friends""visitors""followers""audience""gender""device""geo" 
+    .gender
+
+        &__body
+            justify-content: unset
+
+        &__header
+            display: flex
+            justify-content: space-between
+
+        &__text
+            flex-direction: column
+            align-items: flex-start
+            width: 75px
+            transform: translate(20px)
+
+        &__sex
+            
+            &--women
+                transform: translateY(-10px)
+
+    .audience
+
+        &__body
+            transform: translate(15px, 60px)        
+
+                            
 
     .geo
         &__body
@@ -157,9 +184,25 @@
 
 
 
-@media (max-width: 339px)
+@media (max-width: 355px)
 
     .header
 
         &__notification
-            transform: translate(20px, -48px); 
+            transform: translate(20px, -48px)
+
+    .device
+
+        &__text
+            display: flex
+            transform: translate(10px, 10px)
+            align-items: baseline
+            justify-content: space-around
+
+    .gender
+
+        &__sex
+
+            &--women
+
+                transform: translate(0)        
