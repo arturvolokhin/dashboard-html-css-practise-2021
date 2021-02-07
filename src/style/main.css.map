@@ -7,7 +7,7 @@
         "../sass/config/_variables.sass",
         "../sass/config/_mixins.sass",
         "../sass/config/_app.sass",
-        "../sass/components/_animations.sass",
+        "../sass/config/_animations.sass",
         "../sass/components/_navbar.sass",
         "../sass/components/_header.sass",
         "../sass/components/_people.sass",
