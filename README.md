@@ -1,10 +1,12 @@
-Макет свёрстан с помощью grid-layout и flexbox через препроцессор SASS.
+* Макет свёрстан с помощью **grid-layout** и **flexbox** через препроцессор **SASS** по методологии **БЭМ**.
 
-Вся графика нарисована на css, либо c помощью svg-sprites. 
+* Большая часть графики нарисована на css, либо c помощью **svg-sprites**. 
 
-Присутствуют модифицированные чекбоксы, фиктивный тумблер переключения темы и анимация. 
+* Присутствуют **модифицированные чекбоксы**, фиктивный **тумблер** переключения темы и **анимация**. 
 
-Адаптация отсутствует. Ожидаются доработки)))
-
-https://arturvolokhin.github.io/dashboard/
+* Сделана **адаптация** под все устройства. 
+***
               
+[See my project](https://arturvolokhin.github.io/dashboard/)
+
+![screenshot of sample](https://github.com/arturvolokhin/scrinshots/blob/main/dashboard.png)
