@@ -10,4 +10,4 @@
               
 [See my project](https://arturvolokhin.github.io/dashboard/)
 
-![screenshot of sample](https://github.com/arturvolokhin/scrinshots/blob/main/dashboard.png)
+![screenshot of sample](https://github.com/arturvolokhin/images/blob/main/scrinshots/dashboard.png)
