@@ -1002,7 +1002,7 @@ textarea {
   content: '';
   position: absolute;
   top: -7px;
-  left: -4px;
+  left: -3px;
   display: inline-block;
   width: 6px;
   height: 1px;
@@ -1415,7 +1415,13 @@ textarea {
   color: #979797;
 }
 
-.gender__percent::after {
+.gender__percent--top {
+  position: absolute;
+  top: -6px;
+  left: -35px;
+}
+
+.gender__percent--top::after {
   content: '';
   display: inline-block;
   width: 6px;
@@ -1425,22 +1431,36 @@ textarea {
           transform: translate(4px, -4px);
 }
 
-.gender__percent--top {
-  position: absolute;
-  top: -6px;
-  left: -35px;
-}
-
 .gender__percent--middle {
   position: absolute;
   top: 51px;
   left: -35px;
 }
 
+.gender__percent--middle::after {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 1px;
+  background: #979797;
+  -webkit-transform: translate(5px, -1px);
+          transform: translate(5px, -1px);
+}
+
 .gender__percent--bottom {
   position: absolute;
   top: 106px;
   left: -30px;
+}
+
+.gender__percent--bottom::after {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 1px;
+  background: #979797;
+  -webkit-transform: translate(6px, 3px);
+          transform: translate(6px, 3px);
 }
 
 .geo {
@@ -1799,6 +1819,10 @@ textarea {
   .header__form {
     display: none;
   }
+  .header__login {
+    -webkit-transform: translate(-15px, -15px);
+            transform: translate(-15px, -15px);
+  }
   .header__login-name {
     display: none;
   }
@@ -1806,8 +1830,8 @@ textarea {
     width: auto;
   }
   .header__notification {
-    -webkit-transform: translate(30px, -35px);
-            transform: translate(30px, -35px);
+    -webkit-transform: translateY(-35px);
+            transform: translateY(-35px);
   }
   .header__notification:hover {
     -webkit-animation: none;
@@ -1850,15 +1874,12 @@ textarea {
     width: 100%;
   }
   .navbar {
-    left: 5px;
+    left: 15px;
+    width: 120px;
   }
 }
 
 @media (max-width: 355px) {
-  .header__notification {
-    -webkit-transform: translate(20px, -35px);
-            transform: translate(20px, -35px);
-  }
   .device__text {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1927,4 +1948,3 @@ a {
   -webkit-transform: translateX(30px);
           transform: translateX(30px);
 }
-/*# sourceMappingURL=main.css.map */
